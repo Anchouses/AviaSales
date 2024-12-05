@@ -1,0 +1,69 @@
+[versions]
+#Navigation
+cicerone-ver = "7.1"
+
+#Coil
+coil-ver = "2.5.0"
+
+#DI
+converter-scalars = "2.9.0"
+hilt-ver = "2.48.1"
+
+#Android
+android-core-ver = "1.12.0"
+android-appcompat-ver = "1.6.1"
+android-material-ver = "1.11.0"
+activity_ver = "1.8.2"
+fragment_ver = "1.6.2"
+
+agp = "8.5.0"
+kotlin = "1.9.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.9.3"
+composeBom = "2024.04.01"
+
+[libraries]
+#Navigation
+cicerone = { group = "com.github.terrakok", name = "cicerone", version.ref = "cicerone-ver" }
+
+#Coil
+coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-ver" }
+
+#DI
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converter-scalars" }
+converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "converter-scalars" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt-ver" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-ver" }
+
+
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+#Android
+android-core = { group = "androidx.core", name = "core-ktx", version.ref = "android-core-ver" }
+android-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "android-appcompat-ver" }
+android-material = { group = "com.google.android.material", name = "material", version.ref = "android-material-ver" }
+android-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity_ver" }
+android-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment_ver" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt-ver" }
+
