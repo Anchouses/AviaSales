@@ -38,6 +38,11 @@ object AppTheme {
         @Composable
         @ReadOnlyComposable
         get() = LocalColors.current
+
+    val AppTheme.spacing: Spacing
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalSpacing.current
 }
 
 private val LocalColors = staticCompositionLocalOf<AppColors> {
@@ -46,6 +51,11 @@ private val LocalColors = staticCompositionLocalOf<AppColors> {
 
 private val LocalTypography = staticCompositionLocalOf<AppTypography> {
     error("No typography provided")
+}
+
+
+private val LocalSpacing = staticCompositionLocalOf <Spacing> {
+    error("No spacing provided")
 }
 
 private fun unusedColorScheme(
@@ -80,4 +90,11 @@ private fun unusedColorScheme(
     outline = debugColor,
     outlineVariant = debugColor,
     scrim = debugColor,
+    surfaceBright = debugColor,
+    surfaceDim = debugColor,
+    surfaceContainer = debugColor,
+    surfaceContainerHigh = debugColor,
+    surfaceContainerHighest = debugColor,
+    surfaceContainerLow = debugColor,
+    surfaceContainerLowest = debugColor,
 )

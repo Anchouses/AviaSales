@@ -11,13 +11,13 @@ import com.silaeva.aviasales.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class MainActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
     private val navigator = AppNavigator(this, R.id.fragment_container)
-    @Inject
+//    @Inject
     lateinit var navigationHolder: NavigatorHolder
 
     private val viewModel: MainViewModel by viewModels()

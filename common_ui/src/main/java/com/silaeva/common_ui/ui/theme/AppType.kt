@@ -5,36 +5,54 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-// Set of Material typography styles to start with
+
 object AppTypography {
 
-    val header1 = TextStyle(
+    val title1 = TextStyle(
         fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.ExtraBold,
-        fontSize = 32.sp,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 22.sp,
     )
 
-    val header2 = TextStyle(
+    val title2 = TextStyle(
         fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Bold,
-        fontSize = 24.sp,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 20.sp,
     )
 
-    val header3 = TextStyle(
+    val title3 = TextStyle(
         fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Bold,
+        fontWeight = FontWeight.Medium,
         fontSize = 16.sp,
     )
 
-    val body1 = TextStyle(
+    val title4 = TextStyle(
+        fontFamily = FontFamily.Cursive,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+    )
+
+    val text1 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
     )
 
-    val caption = TextStyle(
+    val text2 = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 14.sp,
+    )
+
+    val buttonText = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp,
+        fontSize = 16.sp,
+    )
+
+    val tabText = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+        fontSize = 10.sp,
     )
 }
