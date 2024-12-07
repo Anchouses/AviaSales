@@ -9,7 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import com.silaeva.common_ui.ui.theme.AppTheme
+import com.silaeva.common_ui.ui.theme.AppColors
+import com.silaeva.common_ui.ui.theme.AppTypography
 
 
 @Composable
@@ -18,9 +19,10 @@ fun BottomNavIcon(
     iconResource: Int,
     descriptionIcon: String,
     onClick: () -> Unit,
-    isClicked: Boolean
+    isClicked: Boolean,
+
 ) {
-    val color = if (isClicked) AppTheme.colors.content.accent else AppTheme.colors.content.primary
+    val color = if (isClicked) AppColors.blue else AppColors.grey_6
 
     TextButton(
         onClick = { onClick() }
@@ -39,7 +41,7 @@ fun BottomNavIcon(
                 modifier = Modifier.align(Alignment.CenterHorizontally),
                 text = descriptionIcon,
                 color = color,
-                style = AppTheme.typography.tabText
+                style = AppTypography.tabText
             )
         }
     }

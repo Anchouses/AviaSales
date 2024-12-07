@@ -19,7 +19,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.silaeva.common_ui.R
-import com.silaeva.common_ui.ui.theme.AppTheme
+import com.silaeva.common_ui.ui.theme.AppColors
+
 
 @Composable
 fun BottomNavBar() {
@@ -54,11 +55,11 @@ fun BottomNavBar() {
         ) {
             HorizontalDivider(
                 thickness = 1.dp,
-                color = AppTheme.colors.background.surface
+                color = AppColors.grey_6
             )
             Row(
                 modifier = Modifier
-                    .background(color = AppTheme.colors.background.primary)
+                    .background(color = AppColors.black)
                     .padding(vertical = 6.dp,)
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceAround,

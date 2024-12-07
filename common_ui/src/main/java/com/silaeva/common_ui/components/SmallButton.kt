@@ -15,8 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.silaeva.common_ui.R
-import com.silaeva.common_ui.ui.theme.AppTheme
-import com.silaeva.common_ui.ui.theme.AppTheme.spacing
+import com.silaeva.common_ui.ui.theme.AppSpacing
 import com.silaeva.common_ui.ui.theme.AppTypography
 
 @Composable
@@ -33,9 +32,9 @@ fun SmallButton(
     Button(
         onClick = onClickListener,
         modifier = modifier
-            .width(AppTheme.spacing.secondaryButtonWidth)
-            .height(AppTheme.spacing.secondaryButtonHeight),
-        shape = RoundedCornerShape(AppTheme.spacing.radiusLarge),
+            .width(AppSpacing.secondaryButtonWidth)
+            .height(AppSpacing.secondaryButtonHeight),
+        shape = RoundedCornerShape(AppSpacing.radiusLarge),
         colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor
         )
@@ -46,12 +45,12 @@ fun SmallButton(
                 contentDescription = iconDescription,
                 modifier = Modifier
                     .align(Alignment.CenterVertically),
-                tint = AppTheme.colors.content.primary
+                tint = textColor
             )
         }
         Spacer(
             modifier = Modifier
-                .width(AppTheme.spacing.radiusSmall)
+                .width(AppSpacing.radiusSmall)
         )
         Text(
             text = text,

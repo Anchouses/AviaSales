@@ -11,12 +11,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.silaeva.common_ui.ui.theme.AppTheme
-import com.silaeva.common_ui.ui.theme.AppTheme.spacing
+import com.silaeva.common_ui.ui.theme.AppColors
+import com.silaeva.common_ui.ui.theme.AppSpacing
+import com.silaeva.common_ui.ui.theme.AppTypography
 
 
 @Composable
-fun PrimaryColorButton(
+fun PrimaryButton(
     modifier: Modifier = Modifier,
     text: String,
     buttonColor: Color,
@@ -27,8 +28,8 @@ fun PrimaryColorButton(
         onClick = onClickListener,
         modifier = modifier
             .fillMaxWidth()
-            .height(AppTheme.spacing.primaryButtonHeight),
-        shape = RoundedCornerShape(AppTheme.spacing.radiusSmall),
+            .height(AppSpacing.primaryButtonHeight),
+        shape = RoundedCornerShape(AppSpacing.radiusSmall),
         colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor,
         )
@@ -36,7 +37,7 @@ fun PrimaryColorButton(
         Text(
             text = text,
             color = textColor,
-            style = AppTheme.typography.buttonText,
+            style = AppTypography.buttonText,
             modifier = Modifier
                 .align(Alignment.CenterVertically)
         )
@@ -46,10 +47,10 @@ fun PrimaryColorButton(
 @Preview(showBackground = true)
 @Composable
 fun PrimaryColorButtonPreview() {
-    PrimaryColorButton(
+    PrimaryButton(
         text = "stringResource(id = R.string.onwards)",
         onClickListener = {},
-        buttonColor = AppTheme.colors.background.primary,
-        textColor = AppTheme.colors.content.primary,
+        buttonColor = AppColors.black,
+        textColor = AppColors.white,
     )
 }

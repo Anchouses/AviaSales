@@ -1,8 +1,6 @@
 plugins {
-    kotlin("kapt")
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.dagger.hilt.android)
 }
 
 android {
@@ -32,24 +30,20 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
         viewBinding = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.4"
+        kotlinCompilerExtensionVersion = "1.5.13"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
+
 }
 
 dependencies {
@@ -73,16 +67,13 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(kotlin("script-runtime"))
     implementation(libs.android.appcompat)
     implementation(libs.android.activity)
 
     implementation(libs.cicerone)
 
-    implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
-}
-
-kapt {
-    correctErrorTypes = true
+    // Koin
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
 }
