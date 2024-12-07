@@ -3,42 +3,39 @@
 cicerone-ver = "7.1"
 
 #Coil
-coil-ver = "2.5.0"
+#coil-ver = "2.6.0"
 
 #DI
 converter-scalars = "2.9.0"
-hilt-ver = "2.48.1"
+hilt-ver = "2.51.1"
 
 #Android
-android-core-ver = "1.12.0"
-android-appcompat-ver = "1.6.1"
-android-material-ver = "1.11.0"
-activity_ver = "1.8.2"
-fragment_ver = "1.6.2"
+android-appcompat-ver = "1.6.0"
 
-agp = "8.5.0"
-kotlin = "1.9.0"
-coreKtx = "1.15.0"
+activity_ver = "1.9.3"
+fragment_ver = "1.8.5"
+
+agp = "8.2.0"
+android-lib = "8.2.0"
+koinBom = "3.5.6"
+kotlin = "1.9.23"
+coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.11.00"
 
 [libraries]
 #Navigation
 cicerone = { group = "com.github.terrakok", name = "cicerone", version.ref = "cicerone-ver" }
 
 #Coil
-coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-ver" }
+#coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-ver" }
 
-#DI
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converter-scalars" }
 converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "converter-scalars" }
-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt-ver" }
-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-ver" }
-
 
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -56,14 +53,19 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
 #Android
-android-core = { group = "androidx.core", name = "core-ktx", version.ref = "android-core-ver" }
 android-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "android-appcompat-ver" }
-android-material = { group = "com.google.android.material", name = "material", version.ref = "android-material-ver" }
+
 android-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity_ver" }
 android-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment_ver" }
 
+#DI
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinBom" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinBom" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinBom" }
+
 [plugins]
+android-library = { id = "com.android.library", version.ref = "android-lib" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt-ver" }
+
 

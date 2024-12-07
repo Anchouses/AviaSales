@@ -1,7 +1,7 @@
 package com.silaeva.common_ui.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -15,23 +15,22 @@ import com.silaeva.common_ui.ui.theme.AppColors
 import com.silaeva.common_ui.ui.theme.AppSpacing
 import com.silaeva.common_ui.ui.theme.AppTypography
 
-
 @Composable
-fun PrimaryButton(
+fun SecondaryButton(
     modifier: Modifier = Modifier,
-    text: String,
     buttonColor: Color,
+    text: String,
     textColor: Color,
     onClickListener: () -> Unit
 ) {
     Button(
         onClick = onClickListener,
         modifier = modifier
-            .fillMaxWidth()
-            .height(AppSpacing.primaryButtonHeight),
-        shape = RoundedCornerShape(AppSpacing.radiusSmall),
+            .width(AppSpacing.secondaryButtonWidth)
+            .height(AppSpacing.secondaryButtonHeight),
+        shape = RoundedCornerShape(AppSpacing.radiusLarge),
         colors = ButtonDefaults.buttonColors(
-            containerColor = buttonColor,
+            containerColor = buttonColor
         )
     ) {
         Text(
@@ -46,11 +45,11 @@ fun PrimaryButton(
 
 @Preview(showBackground = true)
 @Composable
-fun PrimaryColorButtonPreview() {
-    PrimaryButton(
+fun SecondaryButtonPreview() {
+    SecondaryButton(
         text = "stringResource(id = R.string.onwards)",
         onClickListener = {},
         buttonColor = AppColors.black,
-        textColor = AppColors.white,
+        textColor = AppColors.white
     )
 }
